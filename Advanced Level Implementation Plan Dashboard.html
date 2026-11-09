@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مخطط التنفيذ التفصيلي - المستوى الرابع متقدم</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Cairo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            900: '#064e3b',
+                        },
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .gradient-header {
+            background: linear-gradient(135deg, #064e3b 0%, #0f172a 50%, #047857 100%);
+        }
+        .tab-btn.active {
+            background-color: #059669;
+            color: white;
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
+
+    <!-- Header Section -->
+    <header class="gradient-header text-white relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 shadow-xl">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto relative z-10 text-center">
+            <span class="inline-block bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs sm:text-sm px-4 py-1.5 rounded-full font-bold mb-4 backdrop-blur-sm">
+                <i class="fa-solid fa-graduation-cap ml-2">
+                </i>استدامة الموارد والنمذجة الرياضية
+            </span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-3 text-white">
+                مخطط التنفيذ التفصيلي
+            </h1>
+            <p class="text-emerald-200 text-lg sm:text-xl font-semibold max-w-2xl mx-auto">
+                المستوى الرابع: العاشر متقدم • الحادي عشر متقدم • الثاني عشر متقدم
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+
+        <!-- 1. الأهداف التعليمية -->
+        <section class="space-y-6">
+            <div class="flex items-center space-x-3 space-x-reverse border-b border-slate-200 pb-3">
+                <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold text-xl shadow-md">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-navy-900">الأهداف التعليمية</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Goal 1 -->
+                <div class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-all border-r-4 border-r-emerald-500">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-lg flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-navy-900">التفاضل والتكامل</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        تطبيق التفاضل والتكامل والنمذجة الرياضية المتقدمة على قضايا كفاءة الطاقة واستدامة الموارد.
+                    </p>
+                </div>
+
+                <!-- Goal 2 -->
+                <div class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-all border-r-4 border-r-blue-500">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-navy-900">الدوال الأسية واللوغاريتمية</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        استخدام الدوال الأسية واللوغاريتمية لنمذجة النمو أو التضاؤل في الاستهلاك أو التلوث.
+                    </p>
+                </div>
+
+                <!-- Goal 3 -->
+                <div class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-all border-r-4 border-r-purple-500">
+                    <div class="w-12 h-12 bg-purple-100 text-purple-700 rounded-lg flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-navy-900">إنتاج نماذج بحثية</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        إنتاج نماذج رياضية عالية الجودة يمكن أن تشكل أساساً لمشاريع بحثية أو مشاركة خارجية.
+                    </p>
+                </div>
+
+                <!-- Goal 4 -->
+                <div class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-all border-r-4 border-r-gold-500">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-lg flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-navy-900">ربط المفاهيم بالواقع</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        تنمية القدرة على ربط المفاهيم المجردة بتطبيقات واقعية معقدة لخدمة المجتمع.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2 & 3. المجالات المعرفية ومجالات المشاركة -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- المجالات المعرفية -->
+            <section class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+                <div class="flex items-center space-x-3 space-x-reverse mb-6 border-b border-slate-100 pb-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center text-lg shadow-md">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-navy-900">المجالات المعرفية</h2>
+                </div>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check-circle text-emerald-600 mt-1 ml-3 text-lg"></i>
+                        <span class="text-slate-700 font-medium">التفاضل والتكامل ومفاهيمهما الأساسية والتطبيقية.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check-circle text-emerald-600 mt-1 ml-3 text-lg"></i>
+                        <span class="text-slate-700 font-medium">النمذجة الرياضية المتقدمة وتحليل البيانات.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check-circle text-emerald-600 mt-1 ml-3 text-lg"></i>
+                        <span class="text-slate-700 font-medium">الدوال الأسية واللوغاريتمية لتحسين كفاءة الطاقة واستدامة الموارد.</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- مجالات المشاركة -->
+            <section class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+                <div class="flex items-center space-x-3 space-x-reverse mb-6 border-b border-slate-100 pb-3">
+                    <div class="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center text-lg shadow-md">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-navy-900">مجالات المشاركة المفضل تقديمها</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center hover:bg-emerald-50 transition-colors">
+                        <i class="fa-solid fa-laptop-code text-2xl text-emerald-600 mb-2"></i>
+                        <h4 class="font-bold text-sm text-navy-900">مشروع مبتكر / نموذج رقمي</h4>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center hover:bg-emerald-50 transition-colors">
+                        <i class="fa-solid fa-file-contract text-2xl text-blue-600 mb-2"></i>
+                        <h4 class="font-bold text-sm text-navy-900">بحث / دراسة إحصائية</h4>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center hover:bg-emerald-50 transition-colors">
+                        <i class="fa-solid fa-display text-2xl text-purple-600 mb-2"></i>
+                        <h4 class="font-bold text-sm text-navy-900">ملصق تفاعلي عالي المستوى</h4>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 4. سيناريوهات تنفيذ مقترحة -->
+        <section class="space-y-6">
+            <div class="flex items-center space-x-3 space-x-reverse border-b border-slate-200 pb-3">
+                <div class="w-10 h-10 rounded-xl bg-gold-500 text-white flex items-center justify-center font-bold text-xl shadow-md">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-navy-900">سيناريوهات تنفيذ مقترحة</h2>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex flex-wrap gap-2 pb-2 overflow-x-auto" id="scenarioTabs">
+                <button onclick="switchTab(0)" class="tab-btn active px-4 py-2.5 rounded-xl text-sm font-bold transition-all bg-white text-slate-700 shadow-sm hover:bg-slate-100 flex items-center">
+                    <i class="fa-solid fa-bolt ml-2"></i> السيناريو الأول
+                </button>
+                <button onclick="switchTab(1)" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-bold transition-all bg-white text-slate-700 shadow-sm hover:bg-slate-100 flex items-center">
+                    <i class="fa-solid fa-droplet ml-2"></i> السيناريو الثاني
+                </button>
+                <button onclick="switchTab(2)" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-bold transition-all bg-white text-slate-700 shadow-sm hover:bg-slate-100 flex items-center">
+                    <i class="fa-solid fa-users ml-2"></i> السيناريو الثالث
+                </button>
+                <button onclick="switchTab(3)" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-bold transition-all bg-white text-slate-700 shadow-sm hover:bg-slate-100 flex items-center">
+                    <i class="fa-solid fa-smog ml-2"></i> السيناريو الرابع
+                </button>
+                <button onclick="switchTab(4)" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-bold transition-all bg-white text-slate-700 shadow-sm hover:bg-slate-100 flex items-center">
+                    <i class="fa-solid fa-solar-panel ml-2"></i> السيناريو الخامس
+                </button>
+            </div>
+
+            <!-- Tab Content Cards -->
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 relative">
+                <!-- Scenario 1 -->
+                <div class="tab-content block space-y-4">
+                    <div class="flex items-center text-emerald-700 font-bold text-lg">
+                        <span>السيناريو الأول: «نمذجة استهلاك الطاقة باستخدام الدوال الأسية»</span>
+                    </div>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-700 text-sm">
+                        <li class="bg-slate-50 p-3 rounded-lg border border-slate-100"><i class="fa-solid fa-angle-left text-emerald-500 ml-2"></i>جمع بيانات استهلاك الكهرباء على مدى أشهر أو سنوات.</li>
+                        <li class="bg-slate-50 p-3 rounded-lg border border-slate-100"><i class="fa-solid fa-angle-left text-emerald-500 ml-2"></i>Fitting دالة أسية أو لوغاريتمية، وحساب معدل النمو/التضاؤل.</li>
+                        <li class="bg-slate-50 p-3 rounded-lg border border-slate-100"><i class="fa-solid fa-angle-left text-emerald-500 ml-2"></i>استخدام المشتقات لتحديد نقاط التغير الحرجة.</li>
+                        <li class="bg-slate-50 p-3 rounded-lg border border-slate-100"><i class="fa-solid fa-angle-left text-emerald-500 ml-2"></i>اقتراح سيناريوهات تدخل وحساب الأثر المتوقع.</li>
+                    </ul>
+                    <div class="mt-4 p-4 bg-emerald-50 rounded-xl border border-emerald-200 flex items-center">
+                        <i class="fa-solid fa-box-archive text-emerald-600 text-xl ml-3"></i>
+                        <div>
+                            <span class="font-bold text-emerald-900 block text-sm">المنتج المتوقع:</span>
+                            <span class="text-emerald-800 text-xs sm:text-sm">نموذج في Python أو GeoGebra أو Excel متقدم + تقرير رياضي متكامل.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scenario 2 -->
+                <div class="tab-content hidden space-y-4">
+                    <div class="flex items-center text-emerald-700 font-bold text-lg">
+                        <span>السيناريو الثاني: «تحسين كفاءة نظام ري باستخدام التفاضل»</span>
+                    </div>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-700 text-sm">
+                        <li class="bg-slate-50 p-3 rounded-lg border border-slate-100"><i class="fa-solid fa-angle-left text-emerald-500 ml-2"></i>نمذجة كمية المياه كدالة في الوقت أو المساحة.</li>
+                        <li class="bg-slate-50 p-3 rounded-lg border border-slate-100"><i class="fa-solid fa-angle-left text-emerald-500 ml-2"></i>إيجاد القيم المثلى (أقل استهلاك لأكبر تغطية) باستخدام المشتقات.</li>
+                        <li class="bg-slate-50 p-3 rounded-lg border border-slate-100"><i class="fa-solid fa-angle-left text-emerald-500 ml-2"></i>حساب التكامل لتقدير الكمية الكلية المستخدمة.</li>
+                    </ul>
+                </div>
+
+                <!-- Scenario 3 -->
+                <div class="tab-content hidden space-y-4">
+                    <div class="flex items-center text-emerald-700 font-bold text-lg">
+                        <span>السيناريو الثالث: «نموذج رياضي لانتشار الوعي البيئي أو تبني سلوك الترشيد»</span>
+                    </div>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-700 text-sm">
+                        <li class="bg-slate-50 p-3 rounded-lg border border-slate-100"><i class="fa-solid fa-angle-left text-emerald-500 ml-2"></i>استخدام نماذج نمو أسية أو لوجستية.</li>
+                        <li class="bg-slate-50 p-3 rounded-lg border border-slate-100"><i class="fa-solid fa-angle-left text-emerald-500 ml-2"></i>تحليل حساسية النموذج للمعاملات المختلفة.</li>
+                        <li class="bg-slate-50 p-3 rounded-lg border border-slate-100"><i class="fa-solid fa-angle-left text-emerald-500 ml-2"></i>ربط النتائج بخطط توعية مدرسية مجتمعية.</li>
+                    </ul>
+                </div>
+
+                <!-- Scenario 4 -->
+                <div class="tab-content hidden space-y-4">
+                    <div class="flex items-center text-emerald-700 font-bold text-lg">
+                        <span>السيناريو الرابع: «حساب البصمة الكربونية التراكمية باستخدام التكامل»</span>
+                    </div>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-700 text-sm">
+                        <li class="bg-slate-50 p-3 rounded-lg border border-slate-100"><i class="fa-solid fa-angle-left text-emerald-500 ml-2"></i>تمثيل معدل الانبعاث كدالة رياضية.</li>
+                        <li class="bg-slate-50 p-3 rounded-lg border border-slate-100"><i class="fa-solid fa-angle-left text-emerald-500 ml-2"></i>تكامل الدالة لحساب الإجمالي عبر فترة زمنية محددة.</li>
+                        <li class="bg-slate-50 p-3 rounded-lg border border-slate-100"><i class="fa-solid fa-angle-left text-emerald-500 ml-2"></i>مقارنة سيناريوهات مختلفة (مع وبدون تدخلات).</li>
+                    </ul>
+                </div>
+
+                <!-- Scenario 5 -->
+                <div class="tab-content hidden space-y-4">
+                    <div class="flex items-center text-emerald-700 font-bold text-lg">
+                        <span>السيناريو الخامس: «تحسين توزيع الألواح الشمسية أو موارد الطاقة المتجددة»</span>
+                    </div>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-700 text-sm">
+                        <li class="bg-slate-50 p-3 rounded-lg border border-slate-100"><i class="fa-solid fa-angle-left text-emerald-500 ml-2"></i>نمذجة الإنتاج كدالة في الزاوية، المساحة، أو الوقت.</li>
+                        <li class="bg-slate-50 p-3 rounded-lg border border-slate-100"><i class="fa-solid fa-angle-left text-emerald-500 ml-2"></i>استخدام التفاضل لإيجاد الوضع الأفضل والأمثل للإنتاج.</li>
+                        <li class="bg-slate-50 p-3 rounded-lg border border-slate-100"><i class="fa-solid fa-angle-left text-emerald-500 ml-2"></i>تقدير التوفير المالي والبيئي طويل الأمد.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. مخطط زمني -->
+        <section class="space-y-6">
+            <div class="flex items-center space-x-3 space-x-reverse border-b border-slate-200 pb-3">
+                <div class="w-10 h-10 rounded-xl bg-navy-800 text-white flex items-center justify-center font-bold text-xl shadow-md">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-navy-900">المخطط الزمني للعمل</h2>
+            </div>
+
+            <div class="relative border-r-2 border-emerald-500 mr-4 space-y-8 py-2">
+                <!-- Timeline Item 1 -->
+                <div class="relative pr-8">
+                    <div class="absolute -right-2.5 top-1 w-5 h-5 rounded-full bg-emerald-500 ring-4 ring-emerald-100"></div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                        <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">19 أكتوبر</span>
+                        <h4 class="font-bold text-navy-900 mt-2">الإعلان والتسجيل</h4>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative pr-8">
+                    <div class="absolute -right-2.5 top-1 w-5 h-5 rounded-full bg-emerald-500 ring-4 ring-emerald-100"></div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                        <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">20 – 22 أكتوبر</span>
+                        <h4 class="font-bold text-navy-900 mt-2">اختيار الموضوع وصياغة النموذج</h4>
+                        <p class="text-slate-600 text-xs mt-1">اختيار الموضوع، مراجعة الأدبيات السريعة، وصياغة النموذج المفاهيمي.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative pr-8">
+                    <div class="absolute -right-2.5 top-1 w-5 h-5 rounded-full bg-emerald-500 ring-4 ring-emerald-100"></div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                        <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">23 – 25 أكتوبر</span>
+                        <h4 class="font-bold text-navy-900 mt-2">جمع البيانات وبناء النموذج</h4>
+                        <p class="text-slate-600 text-xs mt-1">جمع البيانات وبناء النموذج الرياضي الأولي.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="relative pr-8">
+                    <div class="absolute -right-2.5 top-1 w-5 h-5 rounded-full bg-emerald-500 ring-4 ring-emerald-100"></div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                        <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">26 – 27 أكتوبر</span>
+                        <h4 class="font-bold text-navy-900 mt-2">تحسين النموذج وكتابة التقرير</h4>
+                        <p class="text-slate-600 text-xs mt-1">تحسين النموذج، التحقق، الحساسية، وكتابة التقرير النهائي.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="relative pr-8">
+                    <div class="absolute -right-2.5 top-1 w-5 h-5 rounded-full bg-emerald-500 ring-4 ring-emerald-100"></div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                        <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">28 أكتوبر</span>
+                        <h4 class="font-bold text-navy-900 mt-2">التسليم النهائي</h4>
+                        <p class="text-slate-600 text-xs mt-1">تسليم (كود + تقرير + عرض إن وجد).</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 6 -->
+                <div class="relative pr-8">
+                    <div class="absolute -right-2.5 top-1 w-5 h-5 rounded-full bg-emerald-500 ring-4 ring-emerald-100"></div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                        <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">29 – 31 أكتوبر</span>
+                        <h4 class="font-bold text-navy-900 mt-2">التحضير للدفاع</h4>
+                        <p class="text-slate-600 text-xs mt-1">التحضير للدفاع عن النموذج أمام اللجنة.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 7 -->
+                <div class="relative pr-8">
+                    <div class="absolute -right-2.5 top-1 w-5 h-5 rounded-full bg-amber-500 ring-4 ring-amber-100"></div>
+                    <div class="bg-amber-50 p-4 rounded-xl shadow-sm border border-amber-200">
+                        <span class="text-xs font-bold text-amber-700 bg-amber-100 px-2.5 py-1 rounded-full border border-amber-300">05 نوفمبر</span>
+                        <h4 class="font-bold text-navy-900 mt-2">التحكيم النهائي 🏆</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. معايير التقييم -->
+        <section class="space-y-6">
+            <div class="flex items-center space-x-3 space-x-reverse border-b border-slate-200 pb-3">
+                <div class="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center font-bold text-xl shadow-md">
+                    <i class="fa-solid fa-list-check"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-navy-900">معايير التقييم</h2>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-5">
+                <!-- Criterion 1 -->
+                <div>
+                    <div class="flex justify-between font-bold mb-1">
+                        <span class="text-slate-800 text-sm">الابتكار والأصالة (جدة النموذج أو طريقة تطبيقه)</span>
+                        <span class="text-emerald-600 text-sm">20%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                        <div class="bg-emerald-500 h-full rounded-full" style="width: 20%"></div>
+                    </div>
+                </div>
+
+                <!-- Criterion 2 -->
+                <div>
+                    <div class="flex justify-between font-bold mb-1">
+                        <span class="text-slate-800 text-sm">الدقة العلمية والرياضية (صحة الاشتقاقات والحلول)</span>
+                        <span class="text-emerald-600 text-sm">20%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                        <div class="bg-emerald-500 h-full rounded-full" style="width: 20%"></div>
+                    </div>
+                </div>
+
+                <!-- Criterion 3 -->
+                <div>
+                    <div class="flex justify-between font-bold mb-1">
+                        <span class="text-slate-800 text-sm">الارتباط بالاستدامة والأثر</span>
+                        <span class="text-emerald-600 text-sm">20%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                        <div class="bg-emerald-500 h-full rounded-full" style="width: 20%"></div>
+                    </div>
+                </div>
+
+                <!-- Criterion 4 -->
+                <div>
+                    <div class="flex justify-between font-bold mb-1">
+                        <span class="text-slate-800 text-sm">قابلية التطبيق العملي</span>
+                        <span class="text-blue-600 text-sm">15%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                        <div class="bg-blue-500 h-full rounded-full" style="width: 15%"></div>
+                    </div>
+                </div>
+
+                <!-- Criterion 5 -->
+                <div>
+                    <div class="flex justify-between font-bold mb-1">
+                        <span class="text-slate-800 text-sm">جودة البيانات والتحليل</span>
+                        <span class="text-purple-600 text-sm">10%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                        <div class="bg-purple-500 h-full rounded-full" style="width: 10%"></div>
+                    </div>
+                </div>
+
+                <!-- Criterion 6 -->
+                <div>
+                    <div class="flex justify-between font-bold mb-1">
+                        <span class="text-slate-800 text-sm">العرض والتواصل (وضوح شرح النموذج)</span>
+                        <span class="text-purple-600 text-sm">10%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                        <div class="bg-purple-500 h-full rounded-full" style="width: 10%"></div>
+                    </div>
+                </div>
+
+                <!-- Criterion 7 -->
+                <div>
+                    <div class="flex justify-between font-bold mb-1">
+                        <span class="text-slate-800 text-sm">الالتزام بالمواعيد</span>
+                        <span class="text-amber-600 text-sm">5%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                        <div class="bg-amber-500 h-full rounded-full" style="width: 5%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7 & 8. دور المشرف والمخرجات المتوقعة -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- دور المشرف -->
+            <section class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+                <div class="flex items-center space-x-3 space-x-reverse mb-4 border-b border-slate-100 pb-3">
+                    <div class="w-10 h-10 rounded-xl bg-teal-600 text-white flex items-center justify-center text-lg shadow-md">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-navy-900">دور المشرف (مهم جداً)</h2>
+                </div>
+                <ul class="space-y-3 text-slate-700 text-sm">
+                    <li class="flex items-start"><i class="fa-solid fa-square-check text-teal-600 mt-1 ml-2"></i>مراجعة الصياغة الرياضية للنموذج بدقة.</li>
+                    <li class="flex items-start"><i class="fa-solid fa-square-check text-teal-600 mt-1 ml-2"></i>التأكد من فهم الطلاب للافتراضات والقيود.</li>
+                    <li class="flex items-start"><i class="fa-solid fa-square-check text-teal-600 mt-1 ml-2"></i>تشجيع استخدام أدوات رقمية مثل: Python, GeoGebra, Desmos, Excel.</li>
+                    <li class="flex items-start"><i class="fa-solid fa-square-check text-teal-600 mt-1 ml-2"></i>توجيه الطلاب لعرض النتائج بلغة واضحة الإدارة.</li>
+                </ul>
+            </section>
+
+            <!-- المخرجات المتوقعة -->
+            <section class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+                <div class="flex items-center space-x-3 space-x-reverse mb-4 border-b border-slate-100 pb-3">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-lg shadow-md">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-navy-900">المخرجات المتوقعة</h2>
+                </div>
+                <ul class="space-y-3 text-slate-700 text-sm">
+                    <li class="flex items-start"><i class="fa-solid fa-star text-indigo-600 mt-1 ml-2"></i>نماذج رياضية قابلة للتطوير والمشاركة في مسابقات خارجية أو نشر مدرسي.</li>
+                    <li class="flex items-start"><i class="fa-solid fa-star text-indigo-600 mt-1 ml-2"></i>توصيات كمية دقيقة للإدارة حول كفاءة الطاقة أو الموارد.</li>
+                    <li class="flex items-start"><i class="fa-solid fa-star text-indigo-600 mt-1 ml-2"></i>ملف أداء قوي (Portfolio) للطلاب المتقدمين للجامعات.</li>
+                </ul>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="bg-navy-900 text-slate-400 py-8 text-center border-t border-slate-800 mt-12">
+        <p class="text-sm">جميع الحقوق محفوظة &copy; 2026 - مخطط التنفيذ التفصيلي للمستوى الرابع المتقدم</p>
+    </footer>
+
+    <!-- Tabs JavaScript Logic -->
+    <script>
+        function switchTab(index) {
+            const tabs = document.querySelectorAll('.tab-btn');
+            const contents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach((tab, i) => {
+                if (i === index) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+
+            contents.forEach((content, i) => {
+                if (i === index) {
+                    content.classList.remove('hidden');
+                    content.classList.add('block');
+                } else {
+                    content.classList.remove('block');
+                    content.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
